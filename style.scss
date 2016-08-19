@@ -1,0 +1,316 @@
+@import url("reset.css");
+
+
+
+
+
+/* read this about this box-sizing thingy 
+https://css-tricks.com/box-sizing/*/
+//scss autoprefixer reset bootstrap
+* {
+    box-sizing: border-box;
+}
+
+
+$sc: #FF5A5F;
+$grey: #EDEFED;
+
+body{ 
+  //!important overrides 
+  background: $grey !important;
+}
+
+
+.top-nav{
+  position: absolute;
+  top: 0px;
+  right: 0;
+  z-index: 1;
+  margin-top:  10px;
+  margin-right: 5%;
+  .nav-item{
+  }
+  a{
+
+  color: white;
+    text-shadow: 0 0 1px black;
+}
+li{
+        padding: 10px;
+
+}
+ 
+}
+#host-link{
+      border: 2px solid white;
+      //keep even with other nav items
+      margin-top: -2px;
+
+      &:hover{
+        background-color: darken($grey, 50%);
+      }
+
+}
+
+
+.carousel{
+
+}
+
+.carousel-item {
+   p{
+      text-shadow: 0 0 3px black;
+ }
+img{
+  margin: 0 auto;
+  width: 100%;
+ }
+
+.caption-heading{
+  font-size: 2rem;
+}
+}
+
+
+.carousel-caption{
+  //top and tranform like this to vertically center 
+  top: 50%;
+transform: translateY(-50%);
+bottom: initial;
+
+}
+
+.carousel-indicators{
+
+  .active{
+      background-color: $grey;
+    }
+  li{
+    //show up on all images
+    border-color: $grey;
+    box-shadow: 0px 0px 0px 1px $sc;
+  }
+}
+
+.form-inline{
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+
+
+.btn-search{
+  background-color: #FF5A5F;
+  color: white;
+  
+}
+
+%visit{
+   background-size: cover;
+    height: 300px;
+  color: white;
+  text-shadow: 0 0 3px black;
+  
+}
+
+#visit-first{
+  @extend %visit;
+ background-image: url("https://upload.wikimedia.org/wikipedia/commons/1/1b/Anchorage_from_Earthquake_Park.jpg");
+  
+
+}
+
+#visit-second{
+  @extend %visit;
+  background-image: url("https://res-1.cloudinary.com/simpleview/image/upload/c_fill,f_auto,h_360,q_50,w_1024/v1/clients/boulder/Panorama%20of%20downtown%20Boulder%20-%20fall_d6baa374-d1f1-4293-a6f6-483d7a1bb984.jpg");
+ 
+}
+
+#visit-third{
+  @extend %visit;
+ background-image: url("http://www.miamiandbeaches.com/~/media/images/miamiandbeaches/plan-your-trip/gettingaround/miami-from-ft-lauderdale/causeway-miami-skyline-612x338.jpg");
+
+}
+.visit-img{
+  cursor: pointer;
+  border: 10px solid white;
+  text-align: center;
+}
+
+#visit-header{
+  text-align: center;
+}
+#see-all-destinations-button-wrapper{
+  text-align: center;
+}
+
+
+%expl{
+   background-size: cover;
+    height: 300px;
+  color: white;
+  text-shadow: 0 0 3px black;
+  cursor: pointer;
+  
+}
+
+#expl-first{
+  @extend %expl;
+ background-image: url("http://cpphilawest.com/wp-content/uploads/Philadelphia_LovePark.jpg");
+  
+
+}
+
+#expl-second{
+  @extend %expl;
+  background-image: url("http://www.sandiego.edu/law/_billboards/_home/images/perfect-climate.png");
+ 
+}
+
+#expl-third{
+  @extend %expl;
+ background-image: url("https://media-cdn.tripadvisor.com/media/photo-s/03/d4/43/79/portland.jpg");
+
+}
+
+#expl-fourth{
+  @extend %expl;
+ background-image: url("http://www.ninezero.com/images/1700-960/sailboats-in-boston-0a5755ca.jpg");
+
+}
+
+#expl-fifth{
+  @extend %expl;
+ background-image: url("http://www.acadiamagic.com/720x480/bar-harbor-0415.jpg");
+
+}
+
+#expl-sixth{
+  @extend %expl;
+ background-image: url("http://4.bp.blogspot.com/-r-6xQbY3IA0/VmXlgScJNTI/AAAAAAAAV9U/H9yvqbINI80/s1600/20039478636_6b4c8ac9a5_o.jpg");
+
+}
+
+#expl-seventh{
+  @extend %expl;
+ background-image: url("http://www.pompo.com/wp-content/uploads/2012/07/IMG_0905.jpg");
+
+}
+
+#expl-eigth{
+  @extend %expl;
+ background-image: url("https://media-cdn.tripadvisor.com/media/photo-s/03/9b/30/26/seattle.jpg");
+
+}
+
+#expl-ninth{
+  @extend %expl;
+ background-image: url("http://www.lennar.com/images/com/images/new-homes/18/14/mhi/DallasSkyline21200X540opt.jpg");
+
+}
+
+#expl-tenth{
+  @extend %expl;
+ background-image: url("https://upload.wikimedia.org/wikipedia/commons/e/e7/Las_Vegas_89.jpg");
+
+}
+
+
+.expl-img{
+  border: 10px solid white;
+  text-align: center;
+}
+
+#expl-header{
+  text-align: center;
+}
+#see-all-destinations-button-wrapper{
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+
+.ui-datepicker{
+  display: none;
+  background-color: white;
+  color: #4F5253;
+  width: 380px;
+  height: 300px;
+  font-size: 18px;
+  word-spacing: 10px;
+  text-align: center;
+  line-height: 2;
+  a{
+    text-decoration: none;
+    color: #606466;
+    width: 200px;
+    margin: 15px;
+    &:hover{
+          background-color: grey;
+
+    }
+  }
+}
+
+.ui-datepicker-title{
+  text-align: center;
+  line-height: 40px;
+}
+
+%ui-datepicker-button{
+   font-size: 0;
+   &:before{
+    width: 6vmax;
+    color: #606466;
+        font-size: 3vmax;
+        border: 1px solid #A1A6A7;
+
+   }
+  &:hover{
+    cursor: pointer;
+}
+}
+
+.ui-datepicker-prev{
+  @extend %ui-datepicker-button;
+  &:before{
+    float: left;
+    content: "←";
+  }
+}
+
+.ui-datepicker-next{
+  @extend %ui-datepicker-button;
+  &:before{
+    float: right;
+    content: "→";
+  }
+}
+
+
+.extra-info{
+  text-shadow: 0 0 2px black;    
+  color: white;
+  clear: both;
+  
+
+  h5{
+    margin-top: 4vh;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  li{
+    font-size: 14px;
+    line-height: 1.5;
+    list-style-type: none;
+    cursor: pointer;
+    &:hover{
+      color: darken( white , 10%);
+    }
+  }
+}
+
+
+.important-z-index{
+  z-index: -999 !important;
+}
